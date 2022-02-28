@@ -1,0 +1,122 @@
+@use '../components/'as *;
+
+.photographer-tile {
+    position: relative;
+    top: -3rem;
+    @include area-padding;
+
+    @media all and (min-width: 1024px) {
+        background-color: color(light, darker);
+        margin: 1rem 2rem -3rem 2rem;
+        border-radius: .5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2rem;
+    }
+
+    &__title {
+        color: color(secondary);
+        font-weight: 100;
+        font-size: 2rem;
+    }
+
+    &__location {
+        color: color(primary);
+    }
+
+    &__description {
+        font-size: .75rem;
+    }
+
+    &__contact-button {
+        padding: .5rem 1.25rem;
+        border-radius: .25rem;
+        color: color(light);
+        background-color: color(primary);
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+        margin: 0 auto;
+        z-index: 9999;
+        cursor: pointer;
+
+        @media all and (min-width: 1024px) {
+            position: unset;
+            z-index: unset;
+            top: 2.5rem;
+            bottom: auto;
+            padding: .75rem .5rem;
+            transform: translate(0, 0);
+        }
+
+        &:hover, &:focus {
+            color: color(dark);
+            background-color: color(secondary, lighter);
+        }
+    }
+
+    &__picture {
+        width: 25vw;
+        height: 25vw;
+        object-position: center;
+        object-fit: cover;
+        display: block;
+        overflow: hidden;
+        border-radius: 50%;
+        margin:  auto;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+
+        @media all and (min-width: 682px) {
+            right: 1.5rem;
+            width: 17.5vw;
+            height: 17.5vw;
+        }
+
+        @media all and (min-width: 1024px) {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            width: 134px;
+            height: 134px;
+        }
+    }
+
+    &__inserts {
+        display: none;
+
+        @media all and (min-width: 1024px) {
+            display: flex;
+            position: fixed;
+            z-index: 9999;
+            bottom: 0;
+            right: 1rem;
+            background-color: color(secondary, lighter);
+            border-radius: .25rem .25rem 0 0;
+            padding: 1rem 1.5rem;
+            width: 15rem;
+            justify-content: space-between;
+        }
+
+        &:focus {
+            outline: none;
+            background-color: color(primary);
+            color: color(light);
+        }
+    }
+
+    &__likes::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+        content: " \f004";
+    }
+}
+
+.filter__list--photographer-tile {
+    justify-content: flex-start;
+    margin-left: -.25rem;
+    max-width: 74vw;
+}

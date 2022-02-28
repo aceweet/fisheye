@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Charset & Title -->
+        <meta charset="UTF-8">
+        <title id="js-page-title">FishEye — Name</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
+
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/28350a576b.js" crossorigin="anonymous" defer></script>
+
+        <!-- Style & Icons -->
+        <link rel="stylesheet" href="../assets/style/css/dist/main.min.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png"/>
+        <link rel="manifest" href="../assets/icons/site.webmanifest"/>
+        <link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
+
+        <!-- Javascript -->
+        <script type="module" src="../assets/javascript/index.js"></script>
+
+        <!-- SEO -->
+        <link rel="canonical" href="#"/>
+        <meta name="author" content="EmbitiousDev"/>
+        <meta name="description" content="FishEye est le quatrième projet de la formation Développeur Front-End de OpenClassrooms: créez un site accessible pour une plateforme de photographes."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="theme-color" content="#901c1c"/>
+
+        <!-- Facebook MetaTags -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="FishEye"/>
+        <meta property="og:site_name" content="FishEye"/>
+        <meta property="og:url" content="#"/>
+        <meta property="og:description" content="FishEye est le quatrième projet de la formation Développeur Front-End de OpenClassrooms: créez un site accessible pour une plateforme de photographes."/>
+        <meta property="og:image" content="../assets/images/logo/FishEye.png"/>
+
+        <!-- Twitter MetaTags -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@EmbitiousDev"/>
+        <meta name="twitter:creator" content="@EmbitiousDev"/> 
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip-link skip-link--main" id="skip-to-main">Se rendre au contenu principal</a>
+            
+            <a href="../" aria-label="FishEye Homepage" class="logo">
+                <img src="../assets/images/logo/FishEye.svg" alt="FishEye's Logo"/>
+            </a>
+        </header>
+
+        <section class="photographer-tile">
+            <div id="photographer-tile__info">
+                <h1 tabindex="0" class="photographer-tile__title" id="js-photographer-name">Name</h1>
+
+                <div class="photographer-tile__text" tabindex="0">
+                    <p class="photographer-tile__location" id="js-photographer-location">Location</p>
+                    <p class="photographer-tile__description" id="js-photographer-tagline">Tagline</p>
+                </div>
+
+                <nav class="filter">
+                    <a href="#contact-button" class="skip-link">Passer ce menu</a>
+
+                    <ul class="filter__list filter__list--photographer-tile" id="js-photographer-tags">
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="photographer-tile__contact">
+                <button class="photographer-tile__contact-button" id="contact-button">Contactez-moi</button>
+            </div>
+
+            <div class="photographer-tile__picture-container" id="js-photographer-portrait">
+                <img src="" alt="" class="photographer-tile__picture" tabindex="0">
+            </div>
+            
+            <div class="photographer-tile__inserts" tabindex="0">
+                <p class="photographer-tile__likes" id="js-photographer-likes">Likes</p>
+                <p class="photographer-tile__price" id="js-photographer-pricing">Price</p>
+            </div>
+        </section>
+
+        <div class="contact-form__background" id="contact-form__background">
+            <section class="contact-form__body">
+
+                <span class="contact-form__close close-button" tabindex="0" aria-role="button" aria-label="close"></span>
+
+                <div class="contact-form__content" id="contact-form-content">
+                    <h2 id="js-contact-title">Contactez-moi</h2>
+
+                    <form name="contact" action="index.html" id="contactForm">
+                        <div class="contact-form__input">
+                            <label for="contact-form__first-name" class="contact-form__text-label">Prénom</label>
+                            <input type="text" id="contact-form__first-name" name="firstName" minlength="2" required class="contact-form__text-input">
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label for="contact-form__last-name" class="contact-form__text-label">Nom</label>
+                            <input type="text" id="contact-form__last-name" name="lastName" minlength="2" required class="contact-form__text-input">
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label for="contact-form__email" class="contact-form__text-label">Email</label>
+                            <input type="email" id="contact-form__email" name="email" required class="contact-form__text-input">
+                        </div>
+
+                        <div class="contact-form__input">
+                            <label for="contact-form__message" class="contact-form__text-label">Votre message</label>
+                            <p id="character-counter" class="contact-form__character-counter">Caractères requis: 20</p>
+                            <textarea id="contact-form__message" name="message" required class="contact-form__text-input"></textarea>
+                        </div>
+
+                        <button class="contact-form__submit-button" id="contact-form__submit-button" form="contactForm" type="button" value="Envoyer">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="sort-menu" id="main">
+            <label for="sorting-menu" class="sort-menu__text" tabindex="0">Trier par</label>
+
+            <select name="sorting-menu" id="sorting-menu" class="sort-menu__dropdown">
+                <option value="popularity" class="sort-menu__item">Popularité</option>
+                <option value="date" class="sort-menu__item">Date</option>
+                <option value="title" class="sort-menu__item">Titre</option>
+            </select>
+        </div>
+
+        <main class="portfolio">
+
+            <div class="lightbox__background" id="lightbox__background">
+                <section class="lightbox__body">
+
+                    <div class="lightbox__controls">
+                        <span class="lightbox__close close-button" tabindex="0" aria-role="button" aria-label="close"></span>
+                        <span class="lightbox__forward" tabindex="0" aria-role="button" aria-label="forward"></span>
+                        <span class="lightbox__backward" tabindex="0" aria-role="button" aria-label="backward"></span>
+                    </div>
+
+                    <figure class="lightbox__content">
+                        <div src="" alt="" class="lightbox__media-container"></div>
+
+                        <figcaption>
+                            <h2 class="lightbox__media-title">Title</h2>
+                        </figcaption>
+                    </figure>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

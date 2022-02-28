@@ -1,46 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <!-- Charset & Title -->
+        <meta charset="UTF-8">
+        <title>FishEye —  Nos Photographes</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FishEye - Accueil</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/homepage.css">
-    <script type="module" src="js/main.js"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
 
-</head>
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/28350a576b.js" crossorigin="anonymous" defer></script>
 
-<body>
-    <!-- BANNER -->
-    <header role="banner">
-        <a href="index.html" title="HomePage"><img
-                src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1614078430/logo_mig5no.png"
-                alt="FishEye Home Page"></a>
-        <!-- NAV -->
-        <nav class="filters" aria-label="photographer categories" role="navigation">
-            <ul>
-                <a href='#'><li data-filter="portrait">#portrait</li></a>
-                <a href='#'><li data-filter="art">#art</li></a>
-                <a href='#'><li data-filter="fashion">#fashion</li></a>
-                <a href='#'><li data-filter="architecture">#architecture</li></a>
-                <a href='#'><li data-filter="travel">#travel</li></a>
-                <a href='#'><li data-filter="sport">#sport</li></a>
-                <a href='#'><li data-filter="animals">#animals</li></a>
-                <a href='#'><li data-filter="events">#events</li></a>
-            </ul>
-        </nav>
-        <h1>Nos Photographes</h1>
-    </header>
-    <main>
-        <!-- BUTTON 'PASSER AU CONTENU' -->
-        <a id="main-photographers-link" href="#photographers">Passer au contenu</a>
-        <!-- PHOTOGRAPHERS -->
-        <section id="photographers" aria-label="photographers">
-        </section>
-    </main>
+        <!-- Style & Icons -->
+        <link rel="stylesheet" href="../assets/style/css/dist/main.min.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png"/>
+        <link rel="manifest" href="../assets/icons/site.webmanifest"/>
+        <link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
 
-</body>
+        <!-- Javascript -->
+        <script type="module" src="../assets/javascript/index.js"></script>
 
+        <!-- SEO -->
+        <link rel="canonical" href="#"/>
+        <meta name="author" content="EmbitiousDev"/>
+        <meta name="description" content="FishEye est le quatrième projet de la formation Développeur Front-End de OpenClassrooms: créez un site accessible pour une plateforme de photographes."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="theme-color" content="#901c1c"/>
+
+        <!-- Facebook MetaTags -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="FishEye"/>
+        <meta property="og:site_name" content="FishEye"/>
+        <meta property="og:url" content="#"/>
+        <meta property="og:description" content="FishEye est le quatrième projet de la formation Développeur Front-End de OpenClassrooms: créez un site accessible pour une plateforme de photographes."/>
+        <meta property="og:image" content="../assets/images/logo/FishEye.png"/>
+
+        <!-- Twitter MetaTags -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@EmbitiousDev"/>
+        <meta name="twitter:creator" content="@EmbitiousDev"/>   
+    </head>
+
+    <body>
+        <header>
+            <a href="#main" class="skip-link skip-link--main" id="skip-to-main">Se rendre au contenu principal</a>
+
+            <a href="/" aria-label="FishEye Homepage" class="logo">
+                <img src="../assets/images/logo/FishEye.svg" alt="FishEye's Logo"/>
+            </a>
+
+            <nav aria-label="photographer categories" class="top-nav filter">
+                <a href="#main" class="skip-link">Passer ce menu</a>
+
+                <ul class="filter__list">
+                    <li>
+                        <span class="screenreader-only">portrait</span>
+                        <button name="portrait" class="filter__option" aria-hidden="true">#portrait</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">art</span>
+                        <button name="art" class="filter__option" aria-hidden="true">#art</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">fashion</span>
+                        <button name="fashion" class="filter__option" aria-hidden="true">#fashion</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">architecture</span>
+                        <button name="architecture" class="filter__option" aria-hidden="true">#architecture</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">voyage</span>
+                        <button name="voyage" class="filter__option" aria-hidden="true">#voyage</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">sport</span>
+                        <button name="sport" class="filter__option" aria-hidden="true">#sport</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">animaux</span>
+                        <button name="animaux" class="filter__option" aria-hidden="true">#animaux</button>
+                    </li>
+                    <li>
+                        <span class="screenreader-only">évènements</span>
+                        <button name="évènements" class="filter__option" aria-hidden="true">#évènements</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <h1 tabindex="0" class="home-title">Nos photographes</h1>
+
+        </main>
+    </body>
 </html>
